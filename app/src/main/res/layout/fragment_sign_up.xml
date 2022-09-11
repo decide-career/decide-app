@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--TODO fix login_header (no shadows and unknown attributes)-->
+    <ImageView
+        android:id="@+id/iv_sign_up_header"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:src="@drawable/login_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_sign_up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="@string/sign_up"
+        android:textSize="@dimen/font_maximum_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+<!--
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/rg_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/rb_sign_up_developer"
+        android:orientation="horizontal"
+        android:background="@drawable/sign_up_rg_background"
+        app:singleSelection="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sign_up"
+        android:layout_marginStart="@dimen/spacing_large_24"
+        android:layout_marginEnd="@dimen/spacing_large_24"
+        android:layout_marginTop="@dimen/spacing_large_24">
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rb_sign_up_developer"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            end
+            android:text="@string/developer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large_20"
+            android:textAlignment="center"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rb_sign_up_employer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+
+            android:text="@string/employer"
+            android:textSize="@dimen/font_large_20"
+            android:textAlignment="center"/>
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+-->
+    <RadioGroup
+        android:id="@+id/rg_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checkedButton="@id/rb_sign_up_developer"
+        android:orientation="horizontal"
+        android:background="@drawable/sign_up_rg_background"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sign_up"
+        android:layout_marginStart="@dimen/spacing_large_24"
+        android:layout_marginEnd="@dimen/spacing_large_24"
+        android:layout_marginTop="@dimen/spacing_large_24">
+        <RadioButton
+            android:id="@+id/rb_sign_up_developer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:background="@drawable/sign_up_rb_background"
+            android:text="@string/developer"
+            android:textColor="@color/white"
+            android:textSize="@dimen/font_large_20"
+            android:textAlignment="center"/>
+        <RadioButton
+            android:id="@+id/rb_sign_up_employer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:text="@string/employer"
+            android:textSize="@dimen/font_large_20"
+            android:textAlignment="center"/>
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_sign_up_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_36"
+        android:layout_marginTop="@dimen/spacing_40"
+        android:text="@string/sign_up_name"
+        android:textSize="@dimen/font_normal_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rg_sign_up" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_sign_up_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/spacing_huge_32"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:layout_marginEnd="@dimen/spacing_huge_32"
+        app:boxCornerRadiusBottomEnd="20dp"
+
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_up_name">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_outline_person_outline_24"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/spacing_tiny_4"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_sign_up_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_36"
+        android:layout_marginTop="@dimen/spacing_20"
+        android:text="Почта"
+        android:textSize="@dimen/font_normal_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_sign_up_name" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_sign_up_mail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/spacing_huge_32"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:layout_marginEnd="@dimen/spacing_huge_32"
+        app:boxCornerRadiusBottomEnd="20dp"
+
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_up_mail">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_mail_outline_24"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/spacing_tiny_4"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_sign_up_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_36"
+        android:layout_marginTop="@dimen/spacing_20"
+        android:text="Пароль"
+        android:textSize="@dimen/font_normal_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_sign_up_mail" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_sign_up_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/spacing_huge_32"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:layout_marginEnd="@dimen/spacing_huge_32"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_up_password">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_outline_lock_24"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+
+            android:padding="@dimen/spacing_tiny_4"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_sign_up_repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_36"
+        android:layout_marginTop="@dimen/spacing_20"
+        android:text="@string/repeat_password"
+        android:textSize="@dimen/font_normal_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_sign_up_password" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_sign_up_repeat"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/spacing_huge_32"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:layout_marginEnd="@dimen/spacing_huge_32"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_up_repeat">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_outline_lock_24"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+
+            android:padding="@dimen/spacing_tiny_4"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_up"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_huge_32"
+        android:layout_marginEnd="@dimen/spacing_huge_32"
+        android:layout_marginTop="@dimen/spacing_huge_32"
+        android:text="@string/sign_up_registr"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_sign_up_git_hub"
+        app:cornerRadius="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_confirmation_user_agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up_user_agreement_confirmation"
+        android:textSize="@dimen/font_normal_16"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_up"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:layout_marginStart="@dimen/spacing_40"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <TextView
+        android:id="@+id/tv_user_agreement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up_user_agreement"
+        android:textSize="@dimen/font_large_20"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="@id/tv_confirmation_user_agreement"
+        app:layout_constraintTop_toBottomOf="@id/tv_confirmation_user_agreement" />
+
+    <TextView
+        android:id="@+id/tv_account_exist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_40"
+        android:text="@string/sign_up_account_exist"
+        android:textSize="@dimen/font_large_20"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="@id/tv_user_agreement"
+        app:layout_constraintTop_toBottomOf="@id/tv_user_agreement" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_up_git_hub"
+        style="@style/Widget.MaterialComponents.Button.Icon.EnterWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:iconPadding="0dp"
+        app:icon="@drawable/ic_github"
+        app:iconGravity="textStart"
+        app:iconTint="@color/black"
+
+        android:elevation="@dimen/spacing_small_8"
+        app:cornerRadius="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til_sign_up_repeat"
+        app:layout_constraintEnd_toStartOf="@id/btn_sign_up_google"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:layout_marginStart="@dimen/spacing_huge_32"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_up_google"
+        style="@style/Widget.MaterialComponents.Button.Icon.EnterWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:iconPadding="0dp"
+        app:icon="@drawable/ic_google"
+        app:iconGravity="textStart"
+        app:iconTintMode="multiply"
+
+        android:elevation="@dimen/spacing_small_8"
+        app:cornerRadius="50dp"
+        app:layout_constraintStart_toEndOf="@id/btn_sign_up_git_hub"
+        app:layout_constraintTop_toTopOf="@+id/btn_sign_up_git_hub"
+        app:layout_constraintEnd_toStartOf="@id/btn_sign_up_vk"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_up_vk"
+        style="@style/Widget.MaterialComponents.Button.Icon.EnterWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:iconPadding="0dp"
+        app:icon="@drawable/ic_vk"
+        app:iconGravity="textStart"
+        app:iconTintMode="multiply"
+        android:elevation="@dimen/spacing_small_8"
+        app:cornerRadius="50dp"
+        app:layout_constraintStart_toEndOf="@id/btn_sign_up_google"
+        app:layout_constraintTop_toTopOf="@+id/btn_sign_up_git_hub"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/spacing_huge_32"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

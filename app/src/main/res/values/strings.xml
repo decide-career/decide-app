@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">decide</string>
+    <string name="sign_in">Вход</string>
+    <string name="forgot_password_request"><u>Забыли пароль?</u></string>
+    <string name="enter">Войти</string>
+    <string name="enter_with">Войти с помощью</string>
+    <string name="no_account_register"><u>Нет аккаунта? Зарегистрируйтесь</u></string>
+    <string name="sign_up">Регистрация</string>
+    <string name="developer">Разработчик</string>
+    <string name="employer">Работодатель</string>
+    <string name="sign_up_name">Имя пользователя</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="sign_up_registr">Регистрация</string>
+    <string name="sign_up_user_agreement_confirmation">Регистрируясь вы принимаете условия</string>
+    <string name="sign_up_user_agreement">пользовательского соглашения</string>
+    <string name="sign_up_account_exist">У меня уже есть аккаунт</string>
+</resources>

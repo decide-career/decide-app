@@ -1,0 +1,210 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--TODO fix login_header (no shadows and unknown attributes)-->
+    <ImageView
+        android:id="@+id/iv_sign_in_header"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:src="@drawable/login_header"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_sign_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="@string/sign_in"
+        android:textSize="@dimen/font_maximum_32"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_sign_in_mail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_36"
+        android:layout_marginTop="@dimen/spacing_40"
+        android:text="Почта"
+        android:textSize="@dimen/font_normal_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_sign_in" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_sign_in_mail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/spacing_huge_32"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:layout_marginEnd="@dimen/spacing_huge_32"
+        app:boxCornerRadiusBottomEnd="20dp"
+
+        app:boxCornerRadiusBottomStart="20dp"
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_in_mail">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_mail_outline_24"
+            android:imeOptions="actionDone"
+            android:inputType="textEmailAddress"
+            android:padding="@dimen/spacing_tiny_4"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_sign_in_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_36"
+        android:layout_marginTop="@dimen/spacing_20"
+        android:text="Пароль"
+        android:textSize="@dimen/font_normal_16"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_sign_in_mail" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_sign_in_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="@dimen/spacing_huge_32"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:layout_marginEnd="@dimen/spacing_huge_32"
+        app:boxCornerRadiusBottomEnd="20dp"
+        app:boxCornerRadiusBottomStart="20dp"
+
+        app:boxCornerRadiusTopEnd="20dp"
+        app:boxCornerRadiusTopStart="20dp"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_sign_in_password">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_outline_lock_24"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+
+            android:padding="@dimen/spacing_tiny_4"
+            android:singleLine="true" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/forgot_password_request"
+        android:textSize="@dimen/font_normal_16"
+        app:layout_constraintTop_toBottomOf="@+id/til_sign_in_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:layout_marginEnd="@dimen/spacing_40"
+        android:clickable="true"
+        android:focusable="true"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_in"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_huge_32"
+        android:layout_marginEnd="@dimen/spacing_huge_32"
+        android:layout_marginTop="@dimen/spacing_huge_32"
+        android:text="@string/enter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_forgot_password"
+        app:cornerRadius="20dp"/>
+
+    <TextView
+        android:id="@+id/tv_enter_with"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_40"
+        android:text="@string/enter_with"
+        android:textSize="@dimen/font_large_20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_sign_in" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_in_git_hub"
+        style="@style/Widget.MaterialComponents.Button.Icon.EnterWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:iconPadding="0dp"
+        app:icon="@drawable/ic_github"
+        app:iconGravity="textStart"
+        app:iconTint="@color/black"
+
+        android:elevation="@dimen/spacing_small_8"
+        app:cornerRadius="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_enter_with"
+        app:layout_constraintEnd_toStartOf="@id/btn_sign_in_google"
+        android:layout_marginTop="@dimen/spacing_small_8"
+        android:layout_marginStart="@dimen/spacing_huge_32"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_in_google"
+        style="@style/Widget.MaterialComponents.Button.Icon.EnterWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:iconPadding="0dp"
+        app:icon="@drawable/ic_google"
+        app:iconGravity="textStart"
+        app:iconTintMode="multiply"
+
+        android:elevation="@dimen/spacing_small_8"
+        app:cornerRadius="50dp"
+        app:layout_constraintStart_toEndOf="@id/btn_sign_in_git_hub"
+        app:layout_constraintTop_toTopOf="@+id/btn_sign_in_git_hub"
+        app:layout_constraintEnd_toStartOf="@id/btn_sign_in_vk"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_sign_in_vk"
+        style="@style/Widget.MaterialComponents.Button.Icon.EnterWith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:iconPadding="0dp"
+        app:icon="@drawable/ic_vk"
+        app:iconGravity="textStart"
+        app:iconTintMode="multiply"
+        android:elevation="@dimen/spacing_small_8"
+        app:cornerRadius="50dp"
+        app:layout_constraintStart_toEndOf="@id/btn_sign_in_google"
+        app:layout_constraintTop_toTopOf="@+id/btn_sign_in_git_hub"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/spacing_huge_32"/>
+
+    <TextView
+        android:id="@+id/tv_sign_in_no_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/no_account_register"
+        android:textSize="@dimen/font_normal_16"
+        app:layout_constraintTop_toBottomOf="@+id/btn_sign_in_git_hub"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="@dimen/spacing_large_24"
+        android:clickable="true"
+        android:focusable="true"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
