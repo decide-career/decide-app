@@ -8,10 +8,14 @@ import androidx.navigation.Navigation
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var navController: NavController
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
         super.onCreate(savedInstanceState, persistentState)
+        println("\n\n\n mainActivity Started \n" +
+                "\n" +
+                "\n" +
+                " ")
 
         setContentView(R.layout.activity_main)
 

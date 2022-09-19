@@ -11,6 +11,7 @@ class SignInFragment:Fragment(R.layout.fragment_sign_in){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        println("signInFragment Started")
         tv_account_exist.setOnClickListener {
             goToSignUpFragment()
         }
