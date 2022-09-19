@@ -6,7 +6,7 @@
     app:startDestination="@id/signInFragment">
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.decide.androidApp.SignInFragment"
+        android:name="com.decide_career.decide_app.SignInFragment"
         android:label="SignInFragment"
         tools:layout="@layout/fragment_sign_in">
 
@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.decide.androidApp.SignUpFragment"
+        android:name="com.decide_career.decide_app.SignUpFragment"
         android:label="SignUpFragment"
         tools:layout="@layout/fragment_sign_up">
         <action

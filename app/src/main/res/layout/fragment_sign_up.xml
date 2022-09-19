@@ -26,44 +26,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--
-    <com.google.android.material.button.MaterialButtonToggleGroup
-        android:id="@+id/rg_sign_up"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:checkedButton="@id/rb_sign_up_developer"
-        android:orientation="horizontal"
-        android:background="@drawable/sign_up_rg_background"
-        app:singleSelection="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_sign_up"
-        android:layout_marginStart="@dimen/spacing_large_24"
-        android:layout_marginEnd="@dimen/spacing_large_24"
-        android:layout_marginTop="@dimen/spacing_large_24">
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/rb_sign_up_developer"
-            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+    <!--
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/rg_sign_up"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            end
-            android:text="@string/developer"
-            android:textColor="@color/white"
-            android:textSize="@dimen/font_large_20"
-            android:textAlignment="center"/>
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/rb_sign_up_employer"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:button="@null"
+            android:checkedButton="@id/rb_sign_up_developer"
+            android:orientation="horizontal"
+            android:background="@drawable/sign_up_rg_background"
+            app:singleSelection="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_sign_up"
+            android:layout_marginStart="@dimen/spacing_large_24"
+            android:layout_marginEnd="@dimen/spacing_large_24"
+            android:layout_marginTop="@dimen/spacing_large_24">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rb_sign_up_developer"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                end
+                android:text="@string/developer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/font_large_20"
+                android:textAlignment="center"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rb_sign_up_employer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:button="@null"
 
-            android:text="@string/employer"
-            android:textSize="@dimen/font_large_20"
-            android:textAlignment="center"/>
-    </com.google.android.material.button.MaterialButtonToggleGroup>
--->
+                android:text="@string/employer"
+                android:textSize="@dimen/font_large_20"
+                android:textAlignment="center"/>
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+    -->
     <RadioGroup
         android:id="@+id/rg_sign_up"
         android:layout_width="0dp"
